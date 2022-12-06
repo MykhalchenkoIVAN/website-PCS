@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <title>PCS</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="img/logo.png" alt="logo_pcs" class="logo" />
+        <img
+          src="img/header_cleaning.png"
+          alt="cleaner"
+          class="header_cleaner"
+        />
+        <img src="img/bkg.png" alt="pcs_bkg" class="header_bg" />
+        <div class="dg_header"></div>
+        <div class="form_intro">
+          <h2>W prosty sposób można dokonać wyceny!</h2>
+          <p>
+            Wyślij zdjęcia swojej nieruchomości i otrzymaj wycenę w 10 minut!
+          </p>
+          <div class="tel">
+            <a href="tel:+48 600 88 99 33">+48 600 88 99 33</a>
+            <a href="tel:+48 600 00 17 12">+48 600 00 17 12</a>
+          </div>
+          <button class="intro_btn">
+            <a href="tel:+48 600 88 99 33" class="btn_link">Zadzwonić</a>
+          </button>
+        </div>
+      </header>
+      <section class="how_we_work">
+        <h2>jak <span>pracujemy</span></h2>
+        <div class="rectangle rectangle1"></div>
+        <div class="img_section_hww">
+          <img src="img/img1.png" alt="pcs1" class="img_how" />
+          <img src="img/img2.jpg" alt="pcs2" class="img_how" />
+          <img src="img/img3.png" alt="pcs3" class="img_how" />
+          <img src="img/img4.png" alt="pcs4" class="img_how" />
+          <img src="img/img5.png" alt="pcs5" class="img_how" />
+          <img src="img/img6.png" alt="pcs6" class="img_how" />
+          <img src="img/img7.png" alt="pcs7" class="img_how" />
+          <img src="img/img8.png" alt="pcs8" class="img_how" />
+        </div>
+        <div class="section_know">
+          <div class="know_left">wiemy jak</div>
+          <div class="know_right">
+            Wiemy jak ważne dla bezpieczeństwa i ergonomii procesu produkcji
+            jest utrzymanie czystości posadzki.
+          </div>
+        </div>
+        <button class="intro_btn">
+          <a href="tel:+48 600 88 99 33" class="btn_link">Zadzwonić</a>
+        </button>
+      </section>
+      <section class="about_as">
+        <h2>O nas</h2>
+        <div class="rectangle rectangle2"></div>
+        <div class="about_us_bg"></div>
+        <img src="img/image_intro.jpg" alt="" />
+        <p>
+          Naszą firmę budujemy w oparciu o doświadczenie! Realizacja każdego
+          kolejnego projektu daje nam wiele nowych cennych wskazówek jak
+          polepszać nasze usługi. Wiemy, że konieczne jest indywidualne
+          podejście do każdego klienta i nie ma dwóch identycznych zleceń. Mamy
+          za sobą tysiące wyczyszczonych linij produkcyjnych w różnych gałęziach
+          przemysłu i wiemy jakie środki użyć aby sprostać każdemu zadaniu.
+          Dysponujemy kadrą, która jest do dyspozycji 24/7 – co jest konieczne
+          w przypadku przestoju produkcji w dni powszechnie wolne od pracy. Mamy
+          maszyny, które pomagają nam osiągnąć zamierzony cel – odkurzacze
+          z separatorem płynów i części stałych, szorowarki i myjki ciśnieniowe.
+          Ponad to jesteśmy zawsze chętni do współpracy, a nasi pracownicy łatwo
+          nawiązują kontakt z działem utrzymania ruchu – co gwarantuje sukces.
+          Naszą pracę z dumą sygnujemy własnym nazwiskiem! Będziemy zaszczyceni
+          mogąc współpracować z Państwa firmą!
+        </p>
+      </section>
+      <section class="servises">
+        <h2>Oferta</h2>
+        <div class="rectangle rectangle3"></div>
+        <div class="ofer_card_wrapper">
+          <div class="ofer_card" id="ofer_cards0">
+            <img src="img/img2.jpg" alt="czyszczenie-maszyn" />
+            <button>Czyszczenie maszyn</button>
+          </div>
+          <div class="ofer_card" id="ofer_cards1">
+            <img src="img/img1.png" alt="czyszczenie_psadzek" />
+            <button>Czyszczenie posadzek</button>
+          </div>
+          <div class="ofer_card" id="ofer_cards2">
+            <img src="img/img7.png" alt="czyszczenie posadzek pcv" />
+            <button>Mycie posadzek PCV</button>
+          </div>
+        </div>
+        <div class="contacts">
+          <div class="contacts_map">
+            <div id="map"></div>
+            <div id="decorative-map" inert></div>
+          </div>
+          <div class="contacts_mail">
+            <h2>Formularz kontaktowy</h2>
+            <form action="" class="contact_form">
+              <input
+                type="text"
+                placeholder="Imię i nazwisko (wymagane)"
+                class="contacts_input"
+              />
+              <input
+                type="text"
+                placeholder="Adres email (wymagane)"
+                class="contacts_input"
+              />
+              <input
+                type="number"
+                placeholder="Numer kontaktowy"
+                class="contacts_input"
+              />
+              <input
+                type="text"
+                placeholder="Treść wiadomości"
+                class="contacts_input"
+              />
+            </form>
+            <button class="contact_btn">Wyślij</button>
+            <p class="submit_p">
+              Dziękujemy za kontakt z nami! Wkrótce otrzymasz odpowiedź.
+            </p>
+            <div class="mail">
+              <img src="img/email_icon.png" alt="mail_pcs" />
+              <a href="mailto:michal@lyka.pl">michal@lyka.pl</a>
+            </div>
+            <div class="contact_tel">
+              <div>
+                <img src="img/telephone_icon.png" alt="" /><a
+                  href="tel:+48 600 88 99 33"
+                  >+48 600 88 99 33</a
+                >
+              </div>
+              <div>
+                <img src="img/telephone_icon.png" alt="" /><a
+                  href="tel:+48 600 00 17 12"
+                  >+48 600 00 17 12</a
+                >
+              </div>
+            </div>
+            <div class="locate">
+              <img src="img/locate_icon.png" alt="locate_pcs" />
+              <p>Krzemieniecka 8, <br />45-401 Opole</p>
+            </div>
+            <div class="rectangle_contacts"></div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer"></footer>
+    </div>
+    <script src="script/script.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/wicg-inert@latest/dist/inert.min.js"></script>
+  </body>
+</html>

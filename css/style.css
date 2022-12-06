@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;900&family=Ubuntu:ital,wght@1,700&display=swap");
+:root {
+  --color_one: #212559;
+  --color_two: #41c2f0;
+  --color_three: #125ea4;
+  --black: #000000;
+  --white: #ffffff;
+  --white_tr: #c4baba25;
+  --silver_tr: rgb(192, 192, 192);
+  --color_h: #333333;
+}
+*,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 63px;
+  text-transform: uppercase;
+  color: var(--color_h);
+  text-align: center;
+}
+/* Header start */
+.header {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  background-color: var(--white_tr);
+}
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 150px;
+}
+.header_cleaner {
+  position: absolute;
+  bottom: 0;
+  left: 752px;
+}
+.header_bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.dg_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 700px;
+  height: 900px;
+  background-color: var(--color_two);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 90%);
+  z-index: -2;
+}
+.form_intro {
+  position: absolute;
+  top: 220px;
+  left: 150px;
+  width: 500px;
+  height: 597px;
+  background-color: var(--white);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 20px 50px -15px rgba(29, 117, 101, 0.3);
+  border-radius: 40px;
+}
+.form_intro h2 {
+  font-size: 28px;
+  font-weight: 600;
+  max-width: 300px;
+  margin: 0;
+}
+.form_intro p {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+}
+.form_intro a {
+  font-size: 32px;
+  text-decoration: none;
+  color: var(--color_one);
+  margin-top: 10px;
+}
+.tel {
+  display: flex;
+  flex-direction: column;
+}
+.intro_btn {
+  font-size: 24px;
+  width: 191px;
+  height: 60px;
+  border-radius: 92px;
+  background-color: var(--color_two);
+  color: var(--black);
+  border: none;
+  box-shadow: 0px 20px 20px -12px rgba(61, 218, 190, 0.4);
+}
+.btn_link {
+  width: 100%;
+  height: 100%;
+}
+.intro_btn:hover {
+  background: var(--color_one);
+}
+.btn_link:hover {
+  color: var(--white);
+}
+/* how we work section start */
+.how_we_work {
+  width: 100%;
+  height: 813px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  box-shadow: 0px 0px 40px -6px rgba(29, 117, 101, 0.2);
+}
+.how_we_work h2 {
+  margin-top: 50px;
+  margin-bottom: 64px;
+  color: var(--color_h);
+}
+.how_we_work span {
+  color: var(--color_two);
+}
+.img_section_hww {
+  margin-left: 150px;
+}
+.img_how {
+  width: 279px;
+  height: 205px;
+  border-radius: 30px;
+}
+.section_know {
+  height: 50px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.know_left {
+  width: 291px;
+  height: 100%;
+  color: var(--silver_tr);
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 138%;
+  text-transform: uppercase;
+  border-right: 6px var(--color_two) solid;
+  text-align: inherit;
+}
+.know_right {
+  width: 827px;
+  margin-left: 10px;
+}
+.how_we_work a {
+  font-size: 32px;
+  text-decoration: none;
+  color: var(--color_one);
+  margin-top: 10px;
+}
+/* Section about as start */
+.about_as {
+  width: 100%;
+  height: 660px;
+  background-color: var(--white_tr);
+  position: relative;
+}
+.about_us_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 295px;
+  background-color: var(--color_two);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 90%);
+}
+.about_as h2 {
+  margin: 0;
+  padding-top: 50px;
+
+  color: #333333;
+}
+.about_as p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 151%;
+  max-width: 550px;
+  margin-left: 150px;
+}
+.about_as img {
+  width: 500px;
+  height: 278px;
+  border-radius: 30px;
+  position: absolute;
+  top: 164px;
+  right: 150px;
+  z-index: 2;
+}
+/* Section servises start */
+.servises {
+  width: 100%;
+  height: 1170px;
+  position: relative;
+}
+.servises h2 {
+  padding-top: 50px;
+}
+.ofer_card_wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0 50px 0;
+}
+.ofer_card {
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 14px 28px rgba(1, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 10px;
+  border-radius: 30px;
+}
+.ofer_card button {
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  margin-bottom: 18px;
+  color: var(--color_h);
+  font-weight: 600;
+}
+.ofer_card img {
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.ofer_card:hover {
+  box-shadow: 0 14px 28px rgba(1, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.contacts {
+  width: 1141px;
+  height: 466px;
+  display: flex;
+  border-radius: 30px;
+  background-color: var(--white_tr);
+  margin: 100px auto 0;
+}
+/* maps */
+.contacts_map {
+  width: 420px;
+  height: 466px;
+}
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+}
+.contacts_mail {
+  height: 100%;
+  position: relative;
+}
+.contacts_mail h2 {
+  width: 510px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.contact_form {
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.contacts_input {
+  width: 320px;
+  height: 48px;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.contacts_input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 138.5%;
+  padding-left: 18px;
+}
+.contact_btn {
+  width: 127px;
+  height: 48px;
+  position: absolute;
+  top: 388px;
+  left: 50px;
+  border-radius: 24px;
+  border: none;
+  background-color: var(--color_two);
+  box-shadow: 0px 20px 20px -12px rgba(61, 218, 190, 0.4);
+}
+.contact_tel {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  top: 198px;
+  left: 458px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.mail {
+  position: absolute;
+  top: 144px;
+  left: 458px;
+}
+.locate {
+  width: 200px;
+  position: absolute;
+  top: 280px;
+  left: 458px;
+  margin-top: 12px;
+}
+.contact_tel a,
+.mail a {
+  margin-left: 20px;
+  color: var(--color_h);
+  text-decoration: none;
+}
+.locate p {
+  margin-left: 20px;
+  color: var(--color_h);
+}
+.contact_tel div,
+.mail,
+.locate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 37px;
+}
+.contact_tel img,
+.mail img,
+.locate img {
+  width: 24px;
+  height: 24px;
+}
+.submit_p {
+  width: 198px;
+  position: absolute;
+  left: 207px;
+  top: 393px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 138.5%;
+}
+/* Rectangle start */
+.rectangle {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color_two);
+  border-radius: 10px;
+}
+.rectangle1 {
+  position: absolute;
+  top: 110px;
+  left: 685px;
+}
+.rectangle2 {
+  position: absolute;
+  top: 110px;
+  left: 685px;
+}
+.rectangle3 {
+  position: absolute;
+  top: 110px;
+  left: 685px;
+}
+.rectangle_contacts {
+  width: 4px;
+  height: 296px;
+  position: absolute;
+  left: 410px;
+  top: 140px;
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+/* footer start */
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 100px;
+  background-color: var(--color_one);
+}
