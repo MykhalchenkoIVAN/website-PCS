@@ -29,6 +29,19 @@ h2 {
   color: var(--color_h);
   text-align: center;
 }
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 3780px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
 /* Header start */
 .header {
   width: 100%;
@@ -60,7 +73,7 @@ h2 {
   width: 700px;
   height: 900px;
   background-color: var(--color_two);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 90%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 92%);
   z-index: -2;
 }
 .form_intro {
@@ -107,6 +120,7 @@ h2 {
   background-color: var(--color_two);
   color: var(--black);
   border: none;
+  transition-duration: 2s;
   box-shadow: 0px 20px 20px -12px rgba(61, 218, 190, 0.4);
 }
 .btn_link {
@@ -147,6 +161,51 @@ h2 {
   height: 205px;
   border-radius: 30px;
 }
+.modal {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  z-index: 6;
+  border: 5px white solid;
+  border-radius: 10px;
+}
+.modal img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.close_modal_window {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 7;
+}
+.arrow_slider {
+  background-color: transparent;
+  border: none;
+  z-index: 7;
+  position: absolute;
+  top: 354px;
+}
+.arrow_left {
+  left: 10px;
+}
+.arrow_right {
+  right: 10px;
+}
+.arrow_slider img:hover {
+  width: 74px;
+  height: 74px;
+}
+
+/* section know start */
 .section_know {
   height: 50px;
   display: flex;
@@ -270,6 +329,7 @@ h2 {
   width: 100%;
   height: 100%;
   border-radius: 30px 0 0 30px;
+  z-index: 2;
 }
 .contacts_mail {
   height: 100%;

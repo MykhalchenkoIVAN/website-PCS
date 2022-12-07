@@ -13,8 +13,9 @@
     />
     <title>PCS</title>
   </head>
-  <body>
+  <body class="body">
     <div class="container">
+      <div class="overlay hidden"></div>
       <header class="header">
         <img src="img/logo.png" alt="logo_pcs" class="logo" />
         <img
@@ -42,14 +43,24 @@
         <h2>jak <span>pracujemy</span></h2>
         <div class="rectangle rectangle1"></div>
         <div class="img_section_hww">
-          <img src="img/img1.png" alt="pcs1" class="img_how" />
-          <img src="img/img2.jpg" alt="pcs2" class="img_how" />
-          <img src="img/img3.png" alt="pcs3" class="img_how" />
-          <img src="img/img4.png" alt="pcs4" class="img_how" />
-          <img src="img/img5.png" alt="pcs5" class="img_how" />
-          <img src="img/img6.png" alt="pcs6" class="img_how" />
-          <img src="img/img7.png" alt="pcs7" class="img_how" />
-          <img src="img/img8.png" alt="pcs8" class="img_how" />
+          <img src="img/img1.png" alt="pcs1" class="img_how" id="0" />
+          <img src="img/img2.png" alt="pcs2" class="img_how" id="1" />
+          <img src="img/img3.png" alt="pcs3" class="img_how" id="2" />
+          <img src="img/img4.png" alt="pcs4" class="img_how" id="3" />
+          <img src="img/img5.png" alt="pcs5" class="img_how" id="4" />
+          <img src="img/img6.png" alt="pcs6" class="img_how" id="5" />
+          <img src="img/img7.png" alt="pcs7" class="img_how" id="6" />
+          <img src="img/img8.png" alt="pcs8" class="img_how" id="7" />
+        </div>
+        <button class="close_modal_window hidden">&times;</button>
+        <button class="arrow_slider arrow_left hidden">
+          <img src="img/arrow_lefth.png" alt="arrow_left" />
+        </button>
+        <button class="arrow_slider arrow_right hidden">
+          <img src="img/arrow_right.png" alt="arrow_right" />
+        </button>
+        <div class="modal hidden" id="modalImg">
+          <img src="" alt="" class="modal_images" />
         </div>
         <div class="section_know">
           <div class="know_left">wiemy jak</div>
@@ -89,7 +100,7 @@
         <div class="rectangle rectangle3"></div>
         <div class="ofer_card_wrapper">
           <div class="ofer_card" id="ofer_cards0">
-            <img src="img/img2.jpg" alt="czyszczenie-maszyn" />
+            <img src="img/img2.png" alt="czyszczenie-maszyn" />
             <button>Czyszczenie maszyn</button>
           </div>
           <div class="ofer_card" id="ofer_cards1">
