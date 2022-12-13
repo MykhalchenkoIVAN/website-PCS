@@ -2,10 +2,9 @@
 
 const header = document.querySelector('.header');
 const sectionHWW = document.querySelector('.how_we_work');
+const sectionHWWWrapper = document.querySelector('.section_hww_wrapper');
 const sectionAboutAs = document.querySelector('.about_as')
 const container = document.querySelector('.container')
-
-
 
 const sectionHwwWrapper = document.querySelector('.section_hww_wrapper')
 const images = document.querySelectorAll('.img_how');
@@ -21,12 +20,8 @@ const oferCards = document.querySelectorAll('.ofer_card');
 
 const btnCall1 = document.getElementById('btn1');
 
-
-
-
 const oferArticle0 = `<section class="article">
 <div class="article_div">
-<img src="img/logo.png" alt="logo_pcs" class="logo_article" />
   <h2 class="article_title">Czyszczenie maszyn przemysłowych</h2>
   <div class="section-text wow fadeInDown">
     <p>
@@ -137,7 +132,6 @@ const oferArticle0 = `<section class="article">
 </section>`
 const oferArticle1 = `<section class="article">
 <div class="article_div">
-<img src="img/logo.png" alt="logo_pcs" class="logo_article" />
   <h2 class="article_title">Czyszczenie posadzek</h2>
   <div class="section-text wow fadeInDown">
     <p>
@@ -159,7 +153,6 @@ const oferArticle1 = `<section class="article">
 </section>`
 const oferArticle2 = `<section class="article">
 <div class="article_div">
-  <img src="img/logo.png" alt="logo_pcs" class="logo_article" />
   <h2 class="article_title">Czyszczenie i konserwacja posadzek PCV</h2>
   <div>
     <p>
@@ -297,112 +290,183 @@ const oferArticle2 = `<section class="article">
 const oferArticleArray = [oferArticle0, oferArticle1, oferArticle2]
 
 const addHiddenClass = function () {
-    modalWindow.classList.add('hidden');
-    overlay.classList.add('hidden');
-    arrLeft.classList.add('hidden');
-    arrRight.classList.add('hidden');
-    modalWindowCall.classList.add('hidden');
-    modalWindowCall.classList.remove('form_intro_flex');
+  modalWindow.classList.add('hidden');
+  overlay.classList.add('hidden');
+  arrLeft.classList.add('hidden');
+  arrRight.classList.add('hidden');
+  modalWindowCall.classList.add('hidden');
+  modalWindowCall.classList.remove('form_intro_flex');
 }
-
-// window.onload = function () {
-
-//     console.log("перша функція");
-// }
+let logo;
 let image;
+let count = 'ofer_cards100';
 image = images;
-;
 let imageId;
 
-// container.addEventListener('click', function () {
-//     console.log(images);
-// })
-
-
 const slider = function () {
-    for (let i = 0; i < image.length; i++) {
-        image[i].addEventListener('click', function () {
-            console.log("click");
-            modalWindow.classList.remove('hidden');
-            overlay.classList.remove('hidden');
-            btnCloseButton.classList.remove('hidden');
-            arrLeft.classList.remove('hidden');
-            arrRight.classList.remove('hidden');
-            modalImage.alt = image[i].alt;
-            modalImage.src = image[i].src;
-            modalWindow.style.marginLeft = (body.clientWidth / 2);
-            modalWindow.style.marginTop = (body.clientHeight / 2);
-            document.documentElement.scrollTop = 650;
-            imageId = image[i].id;
-            imageId++
-            console.log(modalImage.src);
-        })
-    }
+  for (let i = 0; i < image.length; i++) {
+    image[i].addEventListener('click', function () {
+      modalWindow.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      btnCloseButton.classList.remove('hidden');
+      arrLeft.classList.remove('hidden');
+      arrRight.classList.remove('hidden');
+      modalImage.alt = image[i].alt;
+      modalImage.src = image[i].src;
+      modalWindow.style.marginLeft = (body.clientWidth / 2);
+      modalWindow.style.marginTop = (body.clientHeight / 2);
+      document.documentElement.scrollTop = 650;
+      imageId = image[i].id;
+      imageId++
+
+    })
+  }
 }
 
+const exitGeneralPage = function () {
+  logo.addEventListener('click', function () {
+    sectionAboutAs.classList.remove('hidden');
+    header.innerHTML = `<img src="img/logo.png" alt="logo_pcs" class="logo" />
+    <img
+      src="img/header_cleaning.png"
+      alt="cleaner"
+      class="header_cleaner"
+    />
+    <img src="img/bkg.png" alt="pcs_bkg" class="header_bg" />
+    <div class="dg_header"></div>
+    <h1>
+      Firma Sprzątająca
+      <br />
+      <span>PCS</span>
+    </h1>`
+    header.style.height = '900px';
+    sectionHWW.style.height = '813px'
+    sectionHWW.innerHTML = `<h2>jak <span>pracujemy</span></h2>
+    <div class="rectangle rectangle1"></div>
+    <div class="img_section_hww">
+      <img src="img/img1.png" alt="pcs1" class="img_how" id="0" />
+      <img src="img/img2.png" alt="pcs2" class="img_how" id="1" />
+      <img src="img/img3.png" alt="pcs3" class="img_how" id="2" />
+      <img src="img/img4.png" alt="pcs4" class="img_how" id="3" />
+      <img src="img/img5.png" alt="pcs5" class="img_how" id="4" />
+      <img src="img/img6.png" alt="pcs6" class="img_how" id="5" />
+      <img src="img/img7.png" alt="pcs7" class="img_how" id="6" />
+      <img src="img/img8.png" alt="pcs8" class="img_how" id="7" />
+    </div>
+    <div class="section_know">
+      <div class="know_left">wiemy jak</div>
+      <div class="know_right">
+        Wiemy jak ważne dla bezpieczeństwa i ergonomii procesu produkcji
+        jest utrzymanie czystości posadzki.
+      </div>
+    </div>
+    <button class="intro_btn" id="btn1">Skontaktuj się z nami</button>`;
+
+  })
+}
 slider();
 arrRight.addEventListener('click', function () {
+  if (count == 'ofer_cards100' && imageId > 0 && imageId <= (image.length - 1)) {
     imageId++
-    if (imageId > 0 && imageId < 9) {
-        modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
-    } else {
-        imageId = 1
-        modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
-    }
+    modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
+  } else if (count == 'ofer_cards100' && imageId == image.length) {
+    imageId = 1;
+    modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
+  }
+
+  if (count == 'ofer_cards0' && imageId > 0 && imageId <= (image.length - 1)) {
+    imageId++
+    modalImage.src = `file:///E:/PSC%20site1/img/article1img/img${imageId}.png`;
+  } else if (count == 'ofer_cards0' && imageId == image.length) {
+    imageId = 1;
+    modalImage.src = `file:///E:/PSC%20site1/img/article1img/img1.png`;
+  }
+
+  if (count == 'ofer_cards2' && imageId > 0 && imageId <= (image.length - 1)) {
+    imageId++
+    modalImage.src = `file:///E:/PSC%20site1/img/article3img/img${imageId}.png`;
+  } else if (count == 'ofer_cards2' && imageId == image.length) {
+    imageId = 1;
+  }
+
 })
 
 
 arrLeft.addEventListener('click', function () {
+  if (count == 'ofer_cards100' && imageId <= image.length && imageId != 1) {
     imageId--
-    if (imageId > 0 && imageId < 9) {
-        modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
-    } else {
-        imageId = 8
-        modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
-    }
+    modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
+  } else if (count == 'ofer_cards100' && imageId == 1) {
+    imageId = image.length
+    modalImage.src = `file:///E:/PSC%20site1/img/img${imageId}.png`;
+  }
+
+  if (count == 'ofer_cards0' && imageId <= image.length && imageId != 1) {
+    imageId--
+    modalImage.src = `file:///E:/PSC%20site1/img/article1img/img${imageId}.png`;
+  } else if (count == 'ofer_cards0' && imageId == 1) {
+    imageId = image.length
+    modalImage.src = `file:///E:/PSC%20site1/img/article1img/img${imageId}.png`;
+  }
+
+  if (count == 'ofer_cards2' && imageId <= image.length && imageId != 1) {
+    imageId--
+    modalImage.src = `file:///E:/PSC%20site1/img/article3img/img${imageId}.png`;
+  } else if (count == 'ofer_cards2' && imageId == 1) {
+    imageId = image.length
+    modalImage.src = `file:///E:/PSC%20site1/img/article3img/img${imageId}.png`;
+  }
 })
+
 btnCall1.addEventListener('click', function () {
-    modalWindowCall.classList.remove('hidden');
-    modalWindowCall.classList.add('form_intro_flex');
-    overlay.classList.remove('hidden');
-    console.log(modalWindowCall);
+  modalWindowCall.classList.remove('hidden');
+  modalWindowCall.classList.add('form_intro_flex');
+  overlay.classList.remove('hidden');
 })
+
 for (let i = 0; i < oferCards.length; i++) {
-    oferCards[i].addEventListener('click', function () {
-        console.log(image);
-        header.style.display = 'none'
-        sectionHwwWrapper.style.display = 'none'
-        sectionAboutAs.classList.add('hidden');
-        sectionHWW.insertAdjacentHTML("afterbegin", oferArticleArray[i])
-        if (oferCards[i].id == 'ofer_cards0') {
-            sectionHWW.style.height = '1300px'
-        } else if (oferCards[i].id == 'ofer_cards1') {
-            sectionHWW.style.height = '500px'
-        } else if (oferCards[i].id == 'ofer_cards2') {
-            sectionHWW.style.height = '1830px'
-        }
-        const articleTitle = document.querySelector('.article_title');
-        articleTitle.style.marginTop = '100px'
-        document.documentElement.scrollTop = 0;
-        const images = document.querySelectorAll('.img_how');
-        image = images
-        console.log(images);
-    })
+  oferCards[i].addEventListener('click', function () {
+    document.documentElement.scrollTop = 2;
+    header.innerHTML = ` <img src="img/logo.png" alt="logo_pcs" class="logo_article" />`
+    logo = document.querySelector('.logo_article');
+    header.style.height = '150px';
+    count = oferCards[i].id;
+    sectionHWW.innerHTML = '';
+    sectionHwwWrapper.style.display = 'none'
+    sectionAboutAs.classList.add('hidden');
+    sectionHWW.insertAdjacentHTML("afterbegin", oferArticleArray[i])
+    if (oferCards[i].id == 'ofer_cards0') {
+      sectionHWW.style.height = '1300px';
+    } else if (oferCards[i].id == 'ofer_cards1') {
+      sectionHWW.style.height = '500px';
+    } else if (oferCards[i].id == 'ofer_cards2') {
+      sectionHWW.style.height = '1830px';
+    }
+    const articleTitle = document.querySelector('.article_title');
+    articleTitle.style.marginTop = '100px'
+    document.documentElement.scrollTop = 0;
+    const images = document.querySelectorAll('.img_how');
+    image = images
+    slider();
+    exitGeneralPage();
+  })
 }
+
+
 btnCloseButton.addEventListener('click', addHiddenClass);
 
 overlay.addEventListener('click', addHiddenClass);
 
 // Function maps
 document.addEventListener('DOMContentLoaded', function () {
-    const map = L.map('map').setView([50.6767405, 17.9740576], 18);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+  const map = L.map('map').setView([50.6767405, 17.9740576], 18);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
 
-    var marker = L.marker([50.6767405, 17.9740576]).addTo(map);
-    marker.bindPopup(`<b>Firma sprzątająca
+  var marker = L.marker([50.6767405, 17.9740576]).addTo(map);
+  marker.bindPopup(`<b>Firma sprzątająca
     PCS</b>`).openPopup();
 
 })
